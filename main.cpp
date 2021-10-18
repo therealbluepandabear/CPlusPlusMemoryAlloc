@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int *p = (int*)malloc(sizeof(int));
+    int *p = (int*)calloc(1, sizeof(int));
     *p = 5;
     std::cout << *p << "\n";
     free(p);
