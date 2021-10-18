@@ -2,6 +2,11 @@
 
 int main() {
     int *p = (int*)calloc(1, sizeof(int));
+    if (p == nullptr) {
+        std::cout << "Failed to allocate memory" << "\n";
+        return -1;
+    }
+
     *p = 5;
     std::cout << *p << "\n";
     free(p);
