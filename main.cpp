@@ -5,7 +5,7 @@ int main() {
     *p = 5;
     std::cout << *p << "\n";
     free(p);
-    p = NULL;
+    p = nullptr;
     free(p);
     return 0;
 }
