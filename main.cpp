@@ -52,6 +52,11 @@ void TwoD() {
     pData[0][1] = 9;
 
     std::cout << pData[0][1] << "\n";
+
+    delete []p1;
+    delete []p2;
+
+    delete []pData;
 }
 
 void NewArrays() {
