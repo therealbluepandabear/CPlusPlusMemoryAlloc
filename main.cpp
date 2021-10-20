@@ -4,6 +4,7 @@
 void New();
 void NewArrays();
 void Strings();
+void TwoD();
 
 int main() {
 //    int *p = (int*)malloc(5 * sizeof(int));
@@ -17,7 +18,7 @@ int main() {
 //    free(p);
 //    p = nullptr;
 //    free(p);
-    Strings();
+    TwoD();
     return 0;
 }
 
@@ -38,6 +39,19 @@ void Strings() {
     strcpy(p, "C++");
     std::cout << p << std::endl;
     delete []p;
+}
+
+void TwoD() {
+    int *p1 = new int[3];
+    int *p2 = new int[3];
+
+    int **pData = new int *[2];
+    pData[0] = p1;
+    pData[1] = p2;
+
+    pData[0][1] = 9;
+
+    std::cout << pData[0][1] << "\n";
 }
 
 void NewArrays() {
